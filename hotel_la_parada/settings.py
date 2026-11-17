@@ -1,13 +1,8 @@
-import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'hotel-la-parada-local-development-key-change-before-deployment')
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
-
-
-
+SECRET_KEY = 'hotel-la-parada-local-development-key-change-before-deployment'
+DEBUG = True
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 INSTALLED_APPS = ['django.contrib.admin','django.contrib.auth','django.contrib.contenttypes','django.contrib.sessions','django.contrib.messages','django.contrib.staticfiles','gestion']
 MIDDLEWARE = ['django.middleware.security.SecurityMiddleware','django.contrib.sessions.middleware.SessionMiddleware','django.middleware.common.CommonMiddleware','django.middleware.csrf.CsrfViewMiddleware','django.contrib.auth.middleware.AuthenticationMiddleware','django.contrib.messages.middleware.MessageMiddleware']
 ROOT_URLCONF = 'hotel_la_parada.urls'
